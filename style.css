@@ -1,0 +1,60 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+
+#chart {
+  width: 800px;
+  height: 500px;
+}
+
+.nav-button,
+button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.nav-button:hover,
+button:hover {
+  background-color: #005fa3;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.small-font {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.box {
+  border-left: 4px solid #ccc;
+  padding-left: 12px;
+  margin-top: 10px;
+}
+
+.link a {
+  display: block;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
