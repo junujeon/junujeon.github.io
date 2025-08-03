@@ -91,7 +91,7 @@ d3.csv("data/auto-mpg.csv").then(data => {
   const annotations = [
     {
       note: { label: "Heavier cars tend to have lower MPG" },
-      x: x(4800), y: y(10), dy: -30, dx: -30
+      x: x(4732), y: y(9), dy: -200, dx: -100
     }
   ];
 

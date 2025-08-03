@@ -111,12 +111,12 @@ d3.csv("data/auto-mpg.csv").then(data => {
   const annoData = [
     {
       note: {
-        label: "Notice the MPG uptick after the 1970s oil crisis"
+        label: "Beginning of clear MPG improvement in cars"
       },
-      x: x(76),
-      y: y(avgByYear.find(d => d.year === 76).mpg),
+      x: x(75),
+      y: y(avgByYear.find(d => d.year === 75).mpg),
       dx: 30,
-      dy: -30
+      dy: -80
     }
   ];
 
