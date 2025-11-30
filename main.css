@@ -1,0 +1,247 @@
+/* Global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #000;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: lightsteelblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(1rem, 2vw, 2rem) 3rem;
+    z-index: 1000;
+    transition: padding 0.3s ease;
+    min-height: 70px;
+}
+
+.navbar .brand img {
+    width: clamp(40px, 5vw, 60px);
+    border-radius: 50%;
+    display: block;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.25rem 0;
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem);
+    transition: font-size 0.3s ease;
+}
+
+.navbar ul a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s ease;
+}
+
+.navbar ul a:hover:after,
+.navbar ul a.active:after {
+    width: 100%;
+}
+
+.navbar.shrink {
+    padding: clamp(0.5rem, 1vw, 1rem) 3rem;
+}
+
+.navbar.shrink ul a {
+    font-size: clamp(0.9rem, 1vw, 1rem);
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 clamp(1rem, 2vw, 2rem);
+    background: #fff;
+}
+
+.hero .hero-inner {
+    display: flex;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 6rem);
+    max-width: 1100px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.hero .hero-left img {
+    display: block;
+    max-width: 100%;
+    width: clamp(220px, 30vw, 480px);
+    height: auto;
+    object-fit: cover;
+    border-radius: 10%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border: clamp(8px, 2vw, 20px) solid lightsteelblue;
+}
+
+.hero .hero-right {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+}
+
+.hero .hero-right h1 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+.hero .hero-right p {
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    color: #555;
+}
+
+.hero .hero-right .social {
+    display: flex;
+    justify-content: flex-start;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-top: 1rem;
+}
+
+.hero .hero-right .social a {
+    color: #000;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hero .hero-right .social a:hover {
+    transform: scale(1.2);
+    color: #000;
+}
+
+/* Hero responsive */
+@media (max-width: 1024px) {
+    .hero .hero-inner { justify-content: center; }
+    .hero .hero-right { text-align: center; }
+    .hero .social { justify-content: center; }
+}
+
+@media (max-width: 768px) {
+    .hero .hero-inner { flex-direction: column; }
+}
+
+/* Experience Section */
+.experience {
+    background: lightgrey;
+    padding: clamp(3rem, 6vw, 6rem) clamp(1rem, 4vw, 2rem);
+    text-align: center;
+    min-height: 70vh;
+}
+
+.experience h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    margin-bottom: 3rem;
+}
+
+.experience .experience-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(2rem, 4vw, 5rem);
+    max-width: 1200px;
+    margin: auto;
+    justify-content: center;
+}
+
+.experience .experience-col {
+    flex: 1 1 300px;
+    max-width: 290px;
+    background: lightsteelblue;
+    padding: clamp(1.5rem, 3vw, 3rem) clamp(1rem, 2vw, 2rem);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience .experience-col:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.experience .experience-col img.logo {
+    height: clamp(40px, 6vw, 60px);
+    width: auto;
+    margin-bottom: 1rem;
+    transition: filter 0.3s ease;
+}
+
+.experience .experience-col h3 {
+    margin-top: 0;
+    color: #000;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+
+.experience .experience-col p {
+    color: #555;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+
+/* Experience responsive */
+@media (max-width: 768px) {
+    .experience .experience-columns {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .experience .experience-col {
+        max-width: 90%;
+    }
+}
+
+/* Life Section — Clean Gallery Layout */
+.life {
+    background: url('assets/real.jpg') center / cover no-repeat fixed; 
+    padding: clamp(3rem, 5vw, 6rem) 2rem;
+    text-align: center;
+    min-height: 75vh;
+}
+
+.life h2 {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    margin-bottom: 2rem;
+}
+
+.life-gallery {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.life-gallery img {
+    width: clamp(220px, 25vw, 350px);
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* adjust if needed */
+}
