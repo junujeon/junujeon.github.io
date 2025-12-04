@@ -215,7 +215,7 @@ body {
 
 /* Life Section — Clean Gallery Layout */
 .life {
-    background: url('assets/real.jpg') center / cover no-repeat fixed; 
+    background: url('assets/real.jpg') center / cover no-repeat;
     padding: clamp(3rem, 5vw, 6rem) 2rem;
     text-align: center;
     min-height: 75vh;
